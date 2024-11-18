@@ -3,6 +3,9 @@ const seats = document.querySelectorAll('.row .seat:not(.occupied');
 const count = document.getElementById('count');
 const total = document.getElementById('total');
 const avaSeats = document.getElementById('availableSeats');
+const selectSeat = document.getElementById('selectedSeats');
+const occuedSeat = document.getElementById('occupied');
+
 const movieSelect = document.getElementById('movie');
 
 populateUI();
@@ -17,15 +20,9 @@ function setMovieData(movieIndex, moviePrice) {
 // update total and count
 function updateSelectedCount() {
   const selectedSeats = document.querySelectorAll('.row .seat.selected');
-  const occupiedbleSeats = document.querySelectorAll('.row .seat.occupied').length;
-  const Seats = document.querySelectorAll('.row .seat').length;
-
-  const selectedSeatsCount = selectedSeats.length;
-  const totalSeats = Seats - occupiedbleSeats - selectedSeatsCount ;
+ 
 
   const seatsIndex = [...selectedSeats].map((seat) => [...seats].indexOf(seat));
-
-
   localStorage.setItem('selectedSeats', JSON.stringify(seatsIndex));
 
   //copy selected seats into arr
@@ -33,10 +30,23 @@ function updateSelectedCount() {
   //return new array of indexes
 
  
+  updateSeatStatus(selectedSeats);
+  
+}
+
+function updateSeatStatus(selectedSeats) {
+  const occupiedbleSeats = document.querySelectorAll('.row .seat.occupied').length;
+  const seats = document.querySelectorAll('.row .seat').length;
+  const selectedSeatsCount = selectedSeats.length;
+  
+  const totalSeats = seats - occupiedbleSeats - selectedSeatsCount ;
 
   count.innerText = selectedSeatsCount;
   total.innerText = selectedSeatsCount * ticketPrice;
+
   avaSeats.innerText = totalSeats;
+  selectSeat.innerText = selectedSeatsCount;
+  occuedSeat.innerText = occupiedbleSeats;
 }
 
 // get data from localstorage and populate ui

@@ -21,18 +21,21 @@
     <ul class="showcase">
 
       <li>
-        <div class="seat"></div>
+        <div class="seat"> </div>
         <small>N/A</small>
+        <small id="availableSeats"></small>
       </li>
 
       <li>
         <div class="seat selected"></div>
-        <small>Selected</small>
+        <small>Selected </small>
+        <small id="selectedSeats"> </small>
       </li>
 
       <li>
         <div class="seat occupied"></div>
         <small>Occupied</small>
+        <small id="occupied"></small>
       </li>
     </ul>
 
@@ -107,7 +110,7 @@
     <p class="text">
       You have selected <span id="count">0</span> seats for a price of $<span id="total">0</span>
     </p>
-    <span id="availableSeats"></span>
+    <span id="occupiedSeats"></span>
     <script src="script.js"></script>
   </body>
 </html>                        
