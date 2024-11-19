@@ -28,7 +28,6 @@ function updateSelectedCount() {
   //copy selected seats into arr
   // map through array
   //return new array of indexes
-
  
   updateSeatStatus(selectedSeats);
   
@@ -43,7 +42,8 @@ function updateSeatStatus(selectedSeats) {
 
   count.innerText = selectedSeatsCount;
   total.innerText = selectedSeatsCount * ticketPrice;
-
+  console.log(selectedSeats);
+  //count seat status
   avaSeats.innerText = totalSeats;
   selectSeat.innerText = selectedSeatsCount;
   occuedSeat.innerText = occupiedbleSeats;
