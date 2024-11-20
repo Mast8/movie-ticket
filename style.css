@@ -38,9 +38,9 @@ body {
 
 .seat {
   background-color: #444451;
-  height: 12px;
-  width: 15px;
-  margin: 3px;
+  height: 15px;
+  width: 18px;
+  margin: 5px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
@@ -111,4 +111,32 @@ p.text {
 
 p.text span {
   color: #6feaf6;
+}
+
+
+
+input {
+  display: none;
+}
+
+.times {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.time {
+  font-size: 14px;
+  width: fit-content;
+  padding: 7px 14px;
+  background: rgb(233, 233, 233);
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.timings input:checked+label {
+  background: #47a3ff;
+  color: white;
 }
