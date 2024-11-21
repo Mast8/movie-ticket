@@ -13,6 +13,7 @@ body {
   justify-content: center;
   height: 100vh;
   font-family: 'Lato', 'sans-serif';
+  padding: 20%;
 }
 
 .movie-container {
@@ -128,15 +129,20 @@ input {
 }
 
 .time {
+  color: #777;
   font-size: 14px;
   width: fit-content;
   padding: 7px 14px;
   background: rgb(233, 233, 233);
   border-radius: 2px;
   cursor: pointer;
+  border-radius: 5px;
 }
 
 .timings input:checked+label {
   background: #47a3ff;
   color: white;
 }
+
+
+
