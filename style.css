@@ -114,8 +114,6 @@ p.text span {
   color: #6feaf6;
 }
 
-
-
 input {
   display: none;
 }
@@ -125,7 +123,7 @@ input {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .time {
@@ -144,5 +142,15 @@ input {
   color: white;
 }
 
+@media only screen and (max-width: 485px) {
+  .times {
+    display: flex;
+    flex-direction: column;
+  }
 
+  .time{
+    
+    margin: 5px;
+  }
+}
 
