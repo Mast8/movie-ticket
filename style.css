@@ -152,5 +152,17 @@ input {
     
     margin: 5px;
   }
+
+  .showcase {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .movie-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
