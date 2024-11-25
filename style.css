@@ -13,7 +13,6 @@ body {
   justify-content: center;
   height: 100vh;
   font-family: 'Lato', 'sans-serif';
-  padding: 20%;
 }
 
 .movie-container {
@@ -119,7 +118,7 @@ input {
 }
 
 .times {
-  width: 100%;
+  width: 50%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -137,10 +136,12 @@ input {
   border-radius: 5px;
 }
 
-.timings input:checked+label {
-  background: #47a3ff;
+input:checked+label {
+  background: #6feaf6;
   color: white;
 }
+
+
 
 @media only screen and (max-width: 485px) {
   .times {
