@@ -1,6 +1,7 @@
 const container = document.querySelector('.container');
 const seats = document.querySelectorAll('.row .seat:not(.occupied');
 const count = document.getElementById('count');
+const ticket = document.getElementById('ticket');
 const total = document.getElementById('total');
 const avaSeats = document.getElementById('availableSeats');
 const selectSeat = document.getElementById('selectedSeats');
@@ -30,7 +31,6 @@ function updateSelectedCount() {
   //return new array of indexes
  
   updateSeatStatus(selectedSeats);
-  
 }
 
 function updateSeatStatus(selectedSeats) {
@@ -41,7 +41,9 @@ function updateSeatStatus(selectedSeats) {
   const totalSeats = seats - occupiedbleSeats - selectedSeatsCount ;
 
   count.innerText = selectedSeatsCount;
-  total.innerText = selectedSeatsCount * ticketPrice;
+
+  ticket.innerHTML = selectedSeatsCount + " * " + ticketPrice;
+  total.innerText = selectedSeatsCount * ticketPrice +"$";
   console.log(selectedSeats);
   //count seat status
   avaSeats.innerText = totalSeats;
